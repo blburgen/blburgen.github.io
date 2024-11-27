@@ -7,3 +7,11 @@ th {
 ul.no-bullets {
     list-style-type: none; /* Remove bullets */
 }
+.banner {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 1000;
+    text-align: center;
+    padding: 10px;
+    background-color: orange;
+}
