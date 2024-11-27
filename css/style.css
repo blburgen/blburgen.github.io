@@ -15,3 +15,21 @@ ul.no-bullets {
     padding: 10px;
     background-color: orange;
 }
+a.navLink {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 2vw;
+    text-align: center;
+    vertical-align: middle;
+    width: 15vw;
+    height: 3vw;    
+    font: bold 2vw arial;
+    border: solid 2px red;
+    box-shadow: 3px 3px 3px;
+    border-radius: 10px;   
+}
+a:hover {
+    color:black;
+    transform: scale(.85);
+    cursor: pointer;
+}
