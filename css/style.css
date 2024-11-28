@@ -30,6 +30,21 @@ a.navLink {
     box-shadow: 3px 3px 3px;
     border-radius: 10px;   
 }
+
+/*styles the navagation links*/
+a.navLinkThree {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 2vw;
+    text-align: center;
+    vertical-align: middle;
+    width: 25vw;
+    height: 3vw;    
+    font: bold 2vw arial;
+    border: solid 2px red;
+    box-shadow: 3px 3px 3px;
+    border-radius: 10px;   
+}
 /*highlights the navagation link that your cursor is over*/
 a:hover {
     color:black;
@@ -48,4 +63,13 @@ a:hover {
     max-height: 100vh;
     margin-left: auto; 
     margin-right: auto;
+}
+#magic8 {
+    text-align: center;
+}
+#askAnother {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vw;
 }
