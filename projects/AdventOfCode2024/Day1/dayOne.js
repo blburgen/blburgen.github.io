@@ -23,6 +23,9 @@ document.getElementById('file').onchange = function() {
     b = b.sort();
     console.log(a);
     console.log(b);
+    for (let d = 0; d < a.length; d++){
+      answer += Math.abs(a[d] - b[d]);
+    }
     outputSource.innerText = (text + "\n" + a + "\n" + b + "\n" + answer);
   };
   reader.readAsText(file);
