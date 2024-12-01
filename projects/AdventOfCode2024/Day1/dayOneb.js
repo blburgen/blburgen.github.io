@@ -17,7 +17,6 @@ document.getElementById('file').onchange = function() {
     let answerTwo = 0;
     for (var line = 0; line < lines.length; line++) {
       let c = lines[line].trim().split(' ');
-      console.log(lines[line]);
       a.push(c[0]);
       for (let e = 1; e < c.length; e++){
         if (c[e] != "") 

@@ -1,5 +1,4 @@
 const outputSource = document.getElementById('output')
-//const outputSecondSource = document.getElementById("secondOutPut")
 document.getElementById('file').onchange = function() {
   var file = this.files[0];
 
@@ -17,7 +16,6 @@ document.getElementById('file').onchange = function() {
     let answerTwo = 0;
     for (var line = 0; line < lines.length; line++) {
       let c = lines[line].trim().split(' ');
-      console.log(lines[line]);
       a.push(c[0]);
       for (let e = 1; e < c.length; e++){
         if (c[e] != "") 
@@ -40,7 +38,6 @@ document.getElementById('file').onchange = function() {
       }
       answerTwo += h * a[f];
     }
-    //outputSecondSource.innerText = ("What is their similarity score?\nAnswer:\n" + answerTwo);
     outputSource.innerText = ("What is the total distance between your lists?\nAnswer:\n" + answer +
       "\n\nSorted Lists:\n" + a + "\n" + b +
       "\n\nYour provided lists\n" + text);
