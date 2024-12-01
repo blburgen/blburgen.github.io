@@ -1,4 +1,4 @@
-const $output = document.getElementById('output')
+const outputSource = document.getElementById('output')
 document.getElementById('file').onchange = function() {
   var file = this.files[0];
 
@@ -6,13 +6,20 @@ document.getElementById('file').onchange = function() {
   reader.onload = function() {
     // Entire file
     const text = this.result;
-    $output.innerText = text
+    outputSource.innerText = text
 
     // By lines
     var lines = text.split('\n');
+    let a = [];
+    let b = [];
     for (var line = 0; line < lines.length; line++) {
+      let c = lines[line].split(' ');
       console.log(lines[line]);
+      a.push(c[0]);
+      b.push(c[1]);
     }
+    console.log(a);
+    console.log(b);
   };
   reader.readAsText(file);
 };
