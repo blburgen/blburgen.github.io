@@ -20,6 +20,7 @@ document.getElementById('file').onchange = function() {
     }
     console.log(a);
     console.log(b);
+    outputSource.innerText = text + a +b;
   };
   reader.readAsText(file);
 };
