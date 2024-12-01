@@ -52,6 +52,11 @@ a:hover {
     cursor: pointer;
 }
 /*highlights the current webpage in the navagation list*/
+.gray {
+    background-color: gray;
+    color: white;
+}
+
 #coloredBox {
     background-color: brown;
     color: white;
