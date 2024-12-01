@@ -14,10 +14,14 @@ document.getElementById('file').onchange = function() {
     let b = [];
     let answer = 0;
     for (var line = 0; line < lines.length; line++) {
-      let c = lines[line].split(' ');
+      let c = lines[line].trim().split(' ');
       console.log(lines[line]);
       a.push(c[0]);
-      b.push(c[1]);
+      for (let d = 1; d < c.length; d++){
+         if(!isNaN(c[d]){
+           b.push(c[d]);
+         }
+      }    
     }
     a = a.sort();
     b = b.sort();
