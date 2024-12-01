@@ -20,7 +20,7 @@ document.getElementById('file').onchange = function() {
     }
     console.log(a);
     console.log(b);
-    outputSource.innerText = text + a +b;
+    outputSource.innerText = (text + "\n" + a + "\n" + b);
   };
   reader.readAsText(file);
 };
