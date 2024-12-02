@@ -23,11 +23,11 @@ document.getElementById('file').onchange = function() {
           a.push(c[d]);
         }
       }
-      let test = false;
-      if (a[0] < a[1]){
-        for (let e = 1; e < c.length; e++){
-          if(a[e-1] < a[e]){
-            if(Math.abs(a[e-1] - a[e]) >= 1 &&  Math.abs(a[e-1] - a[e]) <= 3){
+      let test = true;
+      if (a[0] - a[1] < 0){
+        for (let e = 1; e < a.length; e++){
+          if(a[e-1] - a[e] < 0){
+            if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
               test = true;
             } else {
               test = false;
@@ -40,10 +40,10 @@ document.getElementById('file').onchange = function() {
           };
           test = true;
         }
-      } else if (a[0] > a[1]){
-        for (let e = 1; e < c.length; e++){
-          if(a[e-1] > a[e]){
-            if(Math.abs(a[e-1] - a[e]) >= 1 &&  Math.abs(a[e-1] - a[e]) <= 3){
+      } else if (a[0] - a[1] > 0){
+        for (let e = 1; e < a.length; e++){
+          if(a[e-1] - a[e] > 0){
+            if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
               test = true;
             } else {
               test = false;
