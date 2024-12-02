@@ -36,11 +36,15 @@ document.getElementById('file').onchange = function() {
               correction = 0;
               test = true;
             } else {
-              if (e == 2){
+              if (e == 2 && correction == 1){
                 correction = 0;
-                if(Math.abs(a[e-1-correction] - a[e]) > 0.5 &&  Math.abs(a[e-1-correction] - a[e]) < 3.5){
-                  correction = 0;
-                  test = true;
+                if (a[e-1] - a[e] < 0){
+                  if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
+                    test = true;
+                  } else {
+                    test = false;
+                    break;
+                  };
                 } else {
                   test = false;
                   break;
@@ -59,22 +63,19 @@ document.getElementById('file').onchange = function() {
             test = true;
           } else {
             if (e == 2 && correction == 1){
+              correction = 0;
               if(a[e-1] - a[e] < 0){
                 if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
-                  correction = 0;
                   test = true;
                 } else {
-                  if(dampener == 1){
-                    test = true;
-                    dampener = 0;
-                    correction = 1;
-                  } else {
                     test = false;
                     break;
-                  };
                 };
-                test = true;
+              } else {
+                test = false;
+                break;
               };
+                test = true;
             } else {
               if(dampener == 1){
                 test = true;
@@ -97,13 +98,17 @@ document.getElementById('file').onchange = function() {
             } else {
               if (e == 2 && correction == 1){
                 correction = 0;
-                if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
-                  correction = 0;
-                  test = true;
+                if(a[e-1] - a[e] > 0){
+                  if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
+                    test = true;
+                  } else {
+                    test = false;
+                    break;
+                  }
                 } else {
                   test = false;
                   break;
-                }
+                };
               } else {
                 if(dampener == 1){
                   test = true;
@@ -114,24 +119,21 @@ document.getElementById('file').onchange = function() {
                   break;
                 };
               };
-            }
+            };
           } else {
             if (e == 2 && correction == 1) {
               if(a[e-1] - a[e] > 0){
+                correction = 0;
                 if(Math.abs(a[e-1] - a[e]) > 0.5 &&  Math.abs(a[e-1] - a[e]) < 3.5){
-                  correction = 0;
                   test = true;
                 } else {
-                  if(dampener == 1){
-                    test = true;
-                    dampener = 0;
-                    correction = 1;
-                  } else {
-                    test = false;
-                    break;
-                  }
-                }
-              }
+                  test = false;
+                  break;
+                };
+              } else {
+                test = false;
+                break;
+              };
             } else {
               if(dampener == 1){
                 test = true;
@@ -141,10 +143,10 @@ document.getElementById('file').onchange = function() {
                 test = false;
                 break;
               }
-            }
-          }
+            };
+          };
           test = true;
-        }
+        };
       } else {
         test = false;
       };
