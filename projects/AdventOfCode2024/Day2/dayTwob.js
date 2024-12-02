@@ -36,6 +36,7 @@ document.getElementById('file').onchange = function() {
               correction = 0;
               test = true;
             } else {
+              // checks if is true if correction is for the first number in array
               if (e == 2 && correction == 1){
                 correction = 0;
                 if (a[e-1] - a[e] < 0){
@@ -56,12 +57,14 @@ document.getElementById('file').onchange = function() {
                   correction = 1;
                 } else {
                   test = false;
+                  correction = 0;
                   break;
                 };
               };
             };
             test = true;
           } else {
+            // checks if is true if correction is for the first number in array
             if (e == 2 && correction == 1){
               correction = 0;
               if(a[e-1] - a[e] < 0){
@@ -83,6 +86,7 @@ document.getElementById('file').onchange = function() {
                 correction = 1;
               } else {
                 test = false;
+                correction = 0;
                 break;
               };
             };
@@ -97,6 +101,7 @@ document.getElementById('file').onchange = function() {
               correction = 0;
               test = true;
             } else {
+              // checks if is true if correction is for the first number in array
               if (e == 2 && correction == 1){
                 correction = 0;
                 if(a[e-1] - a[e] > 0){
@@ -117,11 +122,13 @@ document.getElementById('file').onchange = function() {
                   correction = 1;
                 } else {
                   test = false;
+                  correction = 0;
                   break;
                 };
               };
             };
           } else {
+            // checks if is true if correction is for the first number in array
             if (e == 2 && correction == 1) {
               if(a[e-1] - a[e] > 0){
                 correction = 0;
@@ -142,6 +149,7 @@ document.getElementById('file').onchange = function() {
                 correction = 1;
               } else {
                 test = false;
+                correction = 0;
                 break;
               }
             };
