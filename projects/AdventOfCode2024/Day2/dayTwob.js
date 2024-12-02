@@ -28,7 +28,7 @@ document.getElementById('file').onchange = function() {
       let test = true;
       let dampener = 1;
       let correction = 0;
-      // tests the line if is going down in numbers
+      // tests the line if is going up in numbers
       if (((a[0] - a[a.length - 1]) < 0 && (a[0] - a[1]) < 0) || ((a[1] - a[a.length - 2]) < 0 && (a[1] - a[2]) < 0)){
         for (let e = 1; e < a.length; e++){
           if(a[e-1-correction] - a[e] < 0){
@@ -89,7 +89,8 @@ document.getElementById('file').onchange = function() {
           };
           test = true;
         }
-      } else if (((a[0] - a[a.length - 1]) > 0 && (a[0] - a[1]) > 0) || ((a[1] - a[a.length - 2]) > 0 && (a[1] - a[2]) > 0)){
+      } // tests the line if it is going down in numbers 
+      else if (((a[0] - a[a.length - 1]) > 0 && (a[0] - a[1]) > 0) || ((a[1] - a[a.length - 2]) > 0 && (a[1] - a[2]) > 0)){
         for (let e = 1; e < a.length; e++){
           if(a[e-1-correction] - a[e] > 0){
             if(Math.abs(a[e-1-correction] - a[e]) > 0.5 &&  Math.abs(a[e-1-correction] - a[e]) < 3.5){
@@ -147,9 +148,11 @@ document.getElementById('file').onchange = function() {
           };
           test = true;
         };
-      } else {
+      } // if the line is not going up or down in numbers
+      else {
         test = false;
       };
+      // adds the results of the test to the answer array (b) and "answer" number
       b.push(test);
       if (test == true) {
         answer += 1;
@@ -162,7 +165,7 @@ document.getElementById('file').onchange = function() {
         b.push(a + "\n");
       };
     };
-    
+    // outputs results to screen
     outputSource.innerText = ("Number of Safe reports?\nSafe:\n" + answer + "\nBad:\n " + answerTwo +
       "\n\nAnswer List:\n" + b /*+
       "\n\nYour provided lists\n" + text*/);
