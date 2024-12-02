@@ -26,34 +26,22 @@ document.getElementById('file').onchange = function() {
       let test = false;
       if (a[0] < a[1]){
         for (let e = 1; e < c.length; e++){
-          if (Math.abs(a[0]-a[1]) >= 1 && Math.abs(a[0]-a[1]) <= 3){
-            test = true;
-          } else {
-            test = false;
-            break;
-          }
           if(a[e-1] < a[e]){
             if(Math.abs(a[e-1] - a[e]) >= 1 &&  Math.abs(a[e-1] - a[e]) <= 3){
               test = true;
             } else {
               test = false;
               break;
-            }
+            };
             test = true;
           } else {
             test = false;
             break;
-          }
+          };
           test = true;
         }
       } else if (a[0] > a[1]){
         for (let e = 1; e < c.length; e++){
-          if (Math.abs(a[0]-a[1]) >= 1 && Math.abs(a[0]-a[1]) <= 3){
-            test = true;
-          } else {
-            test = false;
-            break;
-          }
           if(a[e-1] > a[e]){
             if(Math.abs(a[e-1] - a[e]) >= 1 &&  Math.abs(a[e-1] - a[e]) <= 3){
               test = true;
@@ -73,13 +61,17 @@ document.getElementById('file').onchange = function() {
       b.push(test);
       if (test == true) {
         answer += 1;
+        b.push("#" + answer + " ");
+        b.push(a + "\n");
       }
       if (test == false){
         answerTwo += 1;
+        b.push("#" + answerTwo + " ");
+        b.push(a + "\n");
       }
     }
     
-    outputSource.innerText = ("Number of Safe reports?\nAnswer:\n" + answer + " " + answerTwo +
+    outputSource.innerText = ("Number of Safe reports?\nSafe:\n" + answer + "\nBad:\n " + answerTwo +
       "\n\nAnswer List:\n" + b +
       "\n\nYour provided lists\n" + text);
   };
