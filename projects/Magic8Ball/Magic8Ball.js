@@ -3,7 +3,7 @@ let responses = [ "Without a doubt", "Ask again later", "Don't count on it", "It
     "try again","It is decidedly so", "My reply is no", "Better not tell you now", "My sources say no",
     "Yes definitely", "Cannot predict now", "Outlook not so good", "You may rely on it", "Concentrate and ask again",
     "Very doubtful", "As I see it, yes", "Most likely", "Outlook good", "Yes"];
-let question = (prompt("What do you want to ask the magic 8 ball"));
+let question = (prompt("What do you want to ask the magic 8 ball? \n (Yes or No Questions please.)"));
 
 
 // Display a randomly chosen response
@@ -14,6 +14,13 @@ const questionCustomer = document.getElementById("questionCustomer");
 const answerDelay = document.getElementById("answerDelay");
 const answerCustomer = document.getElementById("answerCustomer");
 const askAgain = document.getElementById("askAgain");
+if (question == null || question == ""){
+    question = "Do you not have a question?";
+    responses = ["Ask again later"];
+    randomNum = Math.floor(Math.random() * responses.length);
+    randomTime = 0;
+    lastNumberGiven = 0;
+};
 questionCustomer.innerHTML = ("<h2>" + question + "</h2>");
 
 timeDelay();
