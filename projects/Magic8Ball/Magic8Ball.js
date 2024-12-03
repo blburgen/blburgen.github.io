@@ -8,12 +8,21 @@ let question = (prompt("What do you want to ask the magic 8 ball"));
 
 // Display a randomly chosen response
 let randomNum = Math.floor(Math.random() * responses.length);
-let randomTime = Math.floor(Math.random() * 10);
+let randomTime = Math.floor(Math.random() * 6);
 const questionCustomer = document.getElementById("questionCustomer");
+const answerDelay = document.getElementById("answerDelay");
 const answerCustomer = document.getElementById("answerCustomer");
 questionCustomer.innerHTML = ("<h2>" + question + "</h2>");
-if (randomTime > 2){
-    answerCustomer.innerHTML = ("<p>This one is hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+if (randomTime <= 1){
+    answerDelay.innerHTML = ("<p>This one is too easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+} else if (randomTime <= 2) {
+    answerDelay.innerHTML = ("<p>This one is easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+}else if (randomTime <= 3) {
+    answerDelay.innerHTML = ("<p>This one is a little harder... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+}else if (randomTime <= 4) {
+    answerDelay.innerHTML = ("<p>This one is starting to get hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+}else {
+    answerDelay.innerHTML = ("<p>This one is hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
 };
 setTimeout(thisIsHard, 1000 * randomTime);
 function thisIsHard(){
