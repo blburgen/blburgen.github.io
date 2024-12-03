@@ -13,6 +13,7 @@ const questionCustomer = document.getElementById("questionCustomer");
 const answerDelay = document.getElementById("answerDelay");
 const answerCustomer = document.getElementById("answerCustomer");
 questionCustomer.innerHTML = ("<h2>" + question + "</h2>");
+// this should be on the second line
 if (randomTime <= 1){
     answerDelay.innerHTML = ("<p>This one is too easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
 } else if (randomTime <= 2) {
@@ -24,6 +25,7 @@ if (randomTime <= 1){
 }else {
     answerDelay.innerHTML = ("<p>This one is hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
 };
+//this should be on the third line
 setTimeout(thisIsHard, 1000 * randomTime);
 function thisIsHard(){
     answerCustomer.innerHTML = ("<p>Magic 8 Ball says... <strong>" + responses[randomNum] + "</strong>.</p>");
