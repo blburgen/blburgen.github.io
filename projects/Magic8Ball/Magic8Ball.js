@@ -22,20 +22,20 @@ setTimeout(thisIsHard, 1000 * randomTime);
 // this should be on the second line
 function timeDelay() {
     if (randomTime <= 1){
-        answerDelay.innerHTML = ("<p>This one is too easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+        answerDelay.innerHTML = ("<p style='text-align: center;'>This one is too easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
     } else if (randomTime <= 2) {
-        answerDelay.innerHTML = ("<p>This one is easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+        answerDelay.innerHTML = ("<p style='text-align: center;'>This one is easy... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
     }else if (randomTime <= 3) {
-        answerDelay.innerHTML = ("<p>This one is a little harder... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+        answerDelay.innerHTML = ("<p style='text-align: center;'>This one is a little harder... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
     }else if (randomTime <= 4) {
-        answerDelay.innerHTML = ("<p>This one is starting to get hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+        answerDelay.innerHTML = ("<p style='text-align: center;'>This one is starting to get hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
     }else {
-        answerDelay.innerHTML = ("<p>This one is hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
+        answerDelay.innerHTML = ("<p style='text-align: center;'>This one is hard... <strong>Can you give me " + randomTime + " seconds</strong>.</p>");
     };
 }
 //this should be on the third line
 function thisIsHard(){
-    answerCustomer.innerHTML = ("<p>Magic 8 Ball says... <strong>" + responses[randomNum] + "</strong>.</p>");
+    answerCustomer.innerHTML = ("<p style='text-align: center;'>Magic 8 Ball says... <strong>" + responses[randomNum] + "</strong>.</p>");
 }
 function randomNumbers(){
     randomNum = Math.floor(Math.random() * responses.length);
@@ -45,7 +45,7 @@ function randomNumbers(){
 function askSecondTime(){
     randomNumbers();
     timeDelay();
-    answerCustomer.innerHTML = ("<p>Magic 8 Ball says... <strong></strong>.</p>");
+    answerCustomer.innerHTML = ("<p style='text-align: center;'>Magic 8 Ball says... <strong></strong>.</p>");
     setTimeout(thisIsHard, 1000 * randomTime);
 };
 askAgain.addEventListener("click",askSecondTime);
