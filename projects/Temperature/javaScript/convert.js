@@ -31,11 +31,11 @@ function domLoaded() {
          returnNumber.value = convertFtoC(tempUsed);
       };
       if (parseFloat(fInput.value) < 32) { 
-         imageLink.src = "cold.png";
+         imageLink.src = ".\\images\\cold.png";
       } else if (parseFloat(fInput.value) <= 50) {
-         imageLink.src = "cool.png";
+         imageLink.src = ".\\images\\cool.png";
       } else {
-         imageLink.src = "warm.png";
+         imageLink.src = ".\\images\\warm.png";
       };
    }
    cInput.addEventListener("input", function(){fInput.value = ''});
