@@ -1,21 +1,26 @@
 table {
     width: 95vw;
 }
+
 th {
     border: none;
 }
+
 ul.no-bullets {
     list-style-type: none; /* Remove bullets */
 }
+/*places a border below subheaders on resume*/
 h2 {
     border-bottom: thin solid #0e2352;
 }
+/*places the resume in a box*/
 .resume {
     border: 1px solid #0e2352;
     padding: 0 2vw;
     width: 75%;
     margin: 3vw auto;
 }
+/*formates the header of the resume*/
 .personalInfo {
     background:#0e2352;
     color: white;
@@ -23,6 +28,7 @@ h2 {
     padding: .3vw 0 1vw 0;
     margin: 0 -2vw;
 }
+
 /*styles the banner on the pages*/
 .banner {
     font-family: Arial, Helvetica, sans-serif;
@@ -32,6 +38,7 @@ h2 {
     padding: 10px;
     background-color: orange;
 }
+
 /*styles the navagation links*/
 a.navLink {
     display: inline-block;
@@ -61,12 +68,14 @@ a.navLinkThree {
     box-shadow: 3px 3px 3px;
     border-radius: 10px;   
 }
+
 /*highlights the navagation link that your cursor is over*/
 a:hover {
     color:black;
     transform: scale(.85);
     cursor: pointer;
 }
+
 /*highlights the current webpage in the navagation list*/
 .gray {
     background-color: gray;
@@ -77,6 +86,7 @@ a:hover {
     background-color: brown;
     color: white;
 }
+
 /*Centers the dancing icecream at .\Projects\HappyIceCream*/
 #iceCream {
     display: block;
@@ -85,10 +95,12 @@ a:hover {
     margin-left: auto; 
     margin-right: auto;
 }
+
 #magic8 {
     text-align: center;
     font-size: 10vh;
 }
+
 #askAnother {
     display: block;
     margin-left: auto;
