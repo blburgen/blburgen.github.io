@@ -39,7 +39,7 @@ h2 {
     background-color: orange;
 }
 
-.skillsTable {
+.skillsTable,.educationTable {
     width: 100%;
 }
 
