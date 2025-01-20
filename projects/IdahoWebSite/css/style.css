@@ -24,7 +24,9 @@ main {
 }
 
 aside {
+    display: block;
     grid-area: aside;
+    margin: 10px;
 }
 
 footer {

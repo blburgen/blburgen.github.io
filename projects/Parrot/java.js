@@ -1,7 +1,7 @@
 let connectionStatus = document.getElementById("connectionStatus");
 let response = document.getElementById("response");
 let message = document.getElementById("message");
-//connectionStatus.innerHTML = "Disconnected";
+connectionStatus.innerHTML = "Disconnected";
 let websocket = null;
 
 document.getElementById("connectBtn").addEventListener("click", function() {

@@ -39,7 +39,22 @@ h2 {
     background-color: orange;
 }
 
-/*styles the navagation links*/
+.skillsTable {
+    width: 100%;
+}
+
+.topLeftAdjusted {
+    vertical-align: top;
+    width: 50%;
+}
+
+.topCenterAdjusted {
+    padding-left: 10%;
+    vertical-align: top;
+    width: 50%;
+}
+
+/*styles the navigation links*/
 a.navLink {
     display: inline-block;
     text-decoration: none;
