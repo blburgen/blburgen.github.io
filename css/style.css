@@ -57,11 +57,19 @@ h2 {
 .topCenterAdjusted {
   padding-left: 10%;
   vertical-align: top;
-  width: 50%;
+  width: 33%;
+}
+
+.colleges{
+  font-size: larger;
+}
+
+.degrees{
+  font-weight: bold;
 }
 
 /*styles the navigation links*/
-a.navLink {
+a.navLink{
   display: inline-block;
   text-decoration: none;
   margin: 0 2vw;
