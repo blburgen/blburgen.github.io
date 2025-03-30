@@ -40,11 +40,6 @@ h2 {
   background-color: orange;
 }
 
-.skillsTable,
-.educationTable {
-  width: 100%;
-}
-
 .leftBorder {
     border-left: 1px solid black;
 }
@@ -61,7 +56,7 @@ h2 {
 }
 
 .colleges{
-  font-size: larger;
+  font-size: large;
 }
 
 .degrees{
@@ -87,21 +82,19 @@ a.navLink{
 a.navLinkThree {
   display: inline-block;
   text-decoration: none;
-  margin: 0 2vw;
+  margin: 5pt;
   text-align: center;
   vertical-align: middle;
-  width: 25vw;
-  height: 3vw;
-  font: bold 2vw arial;
-  border: solid 2px red;
-  box-shadow: 3px 3px 3px;
+  font: bold 24pt arial;
+  border: solid 2px black;
+  box-shadow: 3px 3px 3px blue;
   border-radius: 10px;
 }
 
 /*highlights the navigation link that your cursor is over*/
 a:hover {
   color: black;
-  transform: scale(0.85);
+  transform: scale(0.95);
   cursor: pointer;
 }
 
