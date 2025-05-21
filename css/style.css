@@ -19,6 +19,19 @@ h2 {
   border-bottom: thin solid #0e2352;
   text-transform: uppercase;
 }
+
+footer{
+  color:white;
+}
+
+.white{
+  color: lightblue;
+}
+
+.white:hover{
+  color: aqua;
+}
+
 /*places the resume in a box*/
 .resume {
   border: 1px solid #0e2352;
