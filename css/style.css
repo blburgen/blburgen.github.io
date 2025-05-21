@@ -1,3 +1,8 @@
+body{
+  background-size: 100%;
+  background-image: url("/boat-6686952_1920.jpg");
+}
+
 table {
   width: 95vw;
 }
@@ -20,6 +25,7 @@ h2 {
   padding: 0 2vw;
   width: 75%;
   margin: 3vw auto;
+  background-color: white;
 }
 /*formats the header of the resume*/
 .personalInfo {
