@@ -7,6 +7,11 @@ body{
   */
 }
 
+.sticky-element{
+  position: sticky;
+  top: 0;
+}
+
 table {
   width: 95vw;
 }
