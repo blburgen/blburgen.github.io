@@ -7,11 +7,6 @@ body{
   */
 }
 
-.sticky-element{
-  position: sticky;
-  top: 0;
-}
-
 table {
   width: 95vw;
 }
@@ -31,6 +26,11 @@ h2 {
 
 footer{
   color:white;
+}
+
+.sticky-element{
+  position: sticky;
+  top: 0;
 }
 
 .white{
@@ -84,11 +84,19 @@ footer{
 }
 
 .colleges{
+  display: inline-block;
+  width: 100%;
   font-size: large;
+  position: relative;
 }
 
 .degrees{
   font-weight: bold;
+}
+
+.align_right{
+  position: absolute;
+  right: 0;
 }
 
 /*styles the navigation links*/
